@@ -1,4 +1,3 @@
 
-Clothes = '[{"name":"c1","price":"$10","image":"images/c1.jpeg"},{"name":"c2","price":"$10","image":"images/c2.jpeg"},{"name":"c3","price":"$10","image":"images/c3.jpeg"},{"name":"c4","price":"$10","image":"images/c4.jpeg"},{"name":"c5","price":"$10","image":"images/c5.jpeg"},{"name":"c6","price":"$10","image":"images/c6.jpeg"},
-{"name":"c7","price":"$10","image":"images/c7.jpeg"}]';
+Clothes = '[{"name":"c1","price":"111","image":"images/c1.jpeg"},{"name":"c2","price":"142","image":"images/c2.jpeg"},{"name":"c3","price":"15","image":"images/c3.jpeg"},{"name":"c4","price":"15","image":"images/c4.jpeg"},{"name":"c5","price":"15","image":"images/c5.jpeg"},{"name":"c6","price":"15","image":"images/c6.jpeg"},{"name":"c7","price":"15","image":"images/c7.jpeg"}]';
 

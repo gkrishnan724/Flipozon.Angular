@@ -9,15 +9,15 @@
                 }).
                 when('/Electronics', {
                     templateUrl: 'Templates/Electronics.template.html',
-                    controller: 'RouteController'
+                    controller: 'ElectronicsController'
                 }).
                 when('/Books', {
                     templateUrl: 'Templates/Books.template.html',
-                    controller: 'RouteController'
+                    controller: 'BooksController'
                 }).
                 when('/Clothes', {
                     templateUrl: 'Templates/Clothes.template.html',
-                    controller: 'RouteController'
+                    controller: 'ClothesController'
                 }).
                 otherwise({
                     redirectTo: '/login'
@@ -77,4 +77,32 @@ alert("Incorrect Credentials");
    
        
 
+});
+
+module.controller('ElectronicsController',function($scope){
+  
+  $scope.Electronics = JSON.parse(Electronics);
+  
+  
+  
+  
+  
+});
+module.controller('BooksController',function($scope){
+  
+  $scope.Books = JSON.parse(Books);
+  
+  
+  
+  
+  
+});
+module.controller('ClothesController',function($scope){
+  
+  $scope.Clothes = JSON.parse(Clothes);
+  
+  
+  
+  
+  
 });

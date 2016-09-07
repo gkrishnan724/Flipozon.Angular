@@ -54,85 +54,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e6.jpeg" alt="" style="width:320px;height:128px;">
-                        <div class="caption">
-                          <h3>e6</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
+                 <div>
+                <input type = "text" data-ng-model = "search" placeholder = "search" > 
+                </div>
+                 
+            
+            <div class="col-xs-18 cl-sm-6 col-md-3" data-ng-repeat="item in Electronics |filter:search"  >
+                <div class="thumbnail">
+                    <img class="card-img-top" data-ng-src="{{item.image}}" alt="Card image cap">
+                    <div class="card-block">
+                        <h4 size="24px" class="card-title">{{item.name}}</h4>
+                        <br class="card-text">
+                           </br>{{item.price}}</br>
+                        </p>
+                        <a href="" class="btn btn-primary" >Add to cart</a>
                     </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/index.jpeg" alt="" style="width:320px;height:128px;">
-                        <div class="caption">
-                          <h3>index</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e1.jpeg" alt="" style="width:320px;height:128px;">
-                        <div class="caption">
-                          <h3>e1</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e2.jpeg" style="width:320px;height:128px;" >
-                        <div class="caption">
-                          <h3>e2</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e3.jpeg" style="width:320px;height:128px;">
-                        <div class="caption">
-                          <h3>e3</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e4.jpeg" alt="" style="width:320px;height:128px;" >
-                        <div class="caption">
-                          <h3>e4</h3>
-                          <p></p>
-                          <p>
-                            
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                                    <div class="col-xs-6 col-sm-4 col-lg-4 col-md-4">
-                      <div class="thumbnail">
-                        <img src="images/e5.jpeg" alt="" style="width:320px;height:128px;" > 
-                        <div class="caption">
-                          <h3>e5</h3>
-                          <p></p>
-                          
-                            
-   
+                </div>
+            </div>
+        </div>

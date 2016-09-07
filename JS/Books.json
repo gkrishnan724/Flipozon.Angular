@@ -1,4 +1,3 @@
 
-Books = '[{"name":"b1","price":"$10","image":"images/b1.jpeg"},{"name":"b1","price":"$10","image":"images/b1.jpeg"},{"name":"b2","price":"$10","image":"images/b2.jpeg"},{"name":"b3","price":"$10","image":"images/b3.jpeg"},{"name":"b4","price":"$10","image":"images/b4.jpeg"},{"name":"b5","price":"$10","image":"images/b5.jpeg"},
-{"name":"b6","price":"$10","image":"images/b6.jpeg"}]';
+Books = '[{"name":"b1","price":"111","image":"images/b1.jpeg"},{"name":"b2","price":"142","image":"images/b2.jpeg"},{"name":"b3","price":"15","image":"images/b3.jpeg"},{"name":"b4","price":"15","image":"images/b4.jpeg"},{"name":"b5","price":"15","image":"images/b5.jpeg"},{"name":"b6","price":"15","image":"images/b6.jpeg"},{"name":"b7","price":"15","image":"images/b7.jpeg"}]';
 
