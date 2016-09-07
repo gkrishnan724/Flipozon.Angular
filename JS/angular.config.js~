@@ -1,0 +1,15 @@
+demoApp.config(['$routeProvider',
+  function($routeProvider) {
+    $routeProvider.
+      when('/login', {
+        templateUrl: 'Templates/login.template.html',
+        controller: 'SimpleController'
+      }).
+      when('/', {
+        templateUrl: 'Templates/login.template.html',
+        controller: 'Simplecontroller'
+      }).
+      otherwise({
+        redirectTo: '/login'
+      });
+  }]);

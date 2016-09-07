@@ -1,0 +1,48 @@
+
+module.controller( 'loginController', function($scope,$http,$location) {
+
+    $scope.loginData = null;
+    $http.get( 'data/login.json' )
+        .success( function( data ) {
+            $scope.loginData = data;
+        })
+
+    $scope.login = function(user) {
+        cond = 0;
+ var obj = $scope.loginData[i];
+for(i=0;i<$scope.loginData.length;i++){
+
+
+
+if(userid == obj.username)
+{
+cond = 1;
+if(pswrd == obj.password)
+{
+
+ $location.path( "/Electronics" );
+break;
+
+}
+
+else
+{
+alert("Incorrect Password");
+break;
+
+}
+
+
+}
+
+
+
+
+}
+
+if(cond == 0){
+alert("Incorrect Credentials");
+}      
+    }
+
+});
