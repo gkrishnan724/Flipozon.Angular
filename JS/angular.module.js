@@ -25,7 +25,10 @@
         }]);
 
 
-module.controller( 'loginController', function($scope,$http,$location) {
+module.controller( 'loginController', function($scope,$rootScope) {
+  
+  
+    $rootScope.logpage = 1;
   
 
 
@@ -79,7 +82,9 @@ alert("Incorrect Credentials");
 
 });
 
-module.controller('JSONController',function($scope){
+module.controller('JSONController',function($scope,$rootScope){
+  
+  $rootScope.logpage = 0;
   
   $scope.Electronics = JSON.parse(Electronics);
    $scope.Books = JSON.parse(Books);
