@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,12 +37,13 @@
               <a class="navbar-brand" ><b><font size = 36px style = Times>Flipozon</font></b></a>
             </div>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse"
             <link rel="stylesheet" type="text/css" href="shop.css">
-              <ul class="nav navbar-nav navbar-right" data-ng-hide = "logpage == 1">
+              <ul class="nav navbar-nav navbar-right" data-ng-hide = "logpage == 1" >
 
-                <li><a class = "btn"  data-toggle="modal"  data-target="#checkoutModal">Cart</a></li>
-                <li ><a href = "#/login">Login</a></li>
+                <li><a class = "btn"  data-toggle="modal"  data-target="#checkoutModal">Cart <sup data-ng-show = "len>0"><span class="badge" style = "padding:5px 5px;font-size:8px;background:red">{{len}}</span></sup></a></li>
+<li><a href = "#/login" data-ng-click = "logout()">Logout</a></li>
+                
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container -->
@@ -52,6 +53,8 @@
 <br>
 <br>
 <br>
+
+<h3 data-ng-hide = "logpage == 1">Welcome {{username}}</h3>
 <br>
 
 
@@ -67,15 +70,29 @@
       <div class="modal-body">
         <table class = "table">
 <theader><th><i>Item</i></th><th><i>Price</i></th></theader>
-<tbody><tr data-ng-repeat = "item in added track by item.name" > 
+<tbody><tr data-ng-repeat = "item in added track by $index | orderBy :name " > 
 	
-	<td>{{item.name}}</td><td>{{item.price}}</td>
-	</tr></tbody>
+	<td>{{item.name}}</td><td> $ {{item.price}}</td>
+	</tr>
+
+</tbody>
+
  
 </table>
+<table class = "table">
+
+<tr>
+<th></th><th><i>$ {{total}}</i></th></tr>
+<tr><th>Tax</th><th><i>$ {{Tax}}</i></th></tr>
+
+
+<tr><th><i>Total</i></th><th><i> $ {{amt}}</i></th></tr>
+</table>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-success" data-ng-click = "Bill()">Proceed to Payment</button>
+        <button type="button" class="btn btn-danger" data-ng-click = "clear()" >Clear Cart</button>
       </div>
     </div>
 

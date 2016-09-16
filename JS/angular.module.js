@@ -19,6 +19,14 @@
                     templateUrl: 'Templates/Clothes.template.html',
                     controller: 'JSONController'
                 }).
+                when('/Error', {
+                    templateUrl: 'Templates/Error.template.html',
+                    controller: 'JSONController'
+                }).
+                when('/Bill', {
+                    templateUrl: 'Templates/Bill.template.html',
+                    controller: 'JSONController'
+                }).
                 otherwise({
                     redirectTo: '/login'
                 });
@@ -29,7 +37,9 @@ module.controller( 'loginController', function($scope,$rootScope,$location) {
   
   
     $rootScope.logpage = 1;
-  
+  $rootScope.success = 0;
+$rootScope.Errorpage = 1;
+
 
 
 	
@@ -51,7 +61,8 @@ if(form.userid == obj[i].username)
 cond = 1;
 if(form.pswrd == obj[i].password)
 {
-
+$rootScope.username = obj[i].username;
+$rootScope.success = 1;
 $location.path("/Books");
 break;
 
@@ -82,9 +93,33 @@ alert("Incorrect Credentials");
 
 });
 
-module.controller('JSONController',function($scope,$rootScope){
+module.controller('JSONController',function($scope,$rootScope,$location){
+ $rootScope.logpage = 0;
+$rootScope.Errorpage = 0;
+
+if($rootScope.success == 0){
+
+
+$location.path("/Error");
+
+$rootScope.Errorpage = 1;
+$rootScope.logpage = 1;
+};
+
+var currentpage = $location.path();
+
+if(currentpage == "/Bill" && $rootScope.success == 1){
+
+$rootScope.Errorpage = 1;
+$rootScope.logpage = 1;
+
+
+};
   
-  $rootScope.logpage = 0;
+
+
+ 
+
   
   $scope.Electronics = JSON.parse(Electronics);
    $scope.Books = JSON.parse(Books);
@@ -94,30 +129,92 @@ module.controller('JSONController',function($scope,$rootScope){
   
 });
 
-module.controller('MainController', function($scope){
+module.controller('MainController', function($scope,$location){
 
 
-
+$scope.total = 0;
 $scope.added=[];
+
+
+
+
+
+currentpage = $location.path();
+console.log(currentpage);
 
 
 $scope.AddItem = function(name,price){
 
+var value = parseFloat(price);
+
  var cart = {
 
 name: name,
-price: price
+price: value 
 
 
 };
 
+
+$scope.total = $scope.total + value;
 $scope.added.push(cart);
-console.log($scope.added);
-alert("Item added");
+$scope.len = $scope.added.length
+$scope.Tax = $scope.total*0.1;
+$scope.amt = $scope.Tax + $scope.total;
+
+console.log($scope.amt);
+
+
 
 
 };
-  
+
+
+
+$scope.clear = function(){
+
+
+
+$scope.added = [];
+$scope.total = 0;
+$scope.len = $scope.added.length
+$scope.Tax = 0;
+$scope.amt = 0;
+
+
+};
+
+$scope.Bill = function(){
+
+
+
+$location.path("/Bill");
+$('#checkoutModal').modal('hide');
+$scope.added = [];
+$scope.total = 0;
+$scope.len = $scope.added.length
+
+
+
+
+};
+$scope.logout = function(){
+
+
+
+$scope.added = [];
+$scope.total = 0;
+$scope.len = $scope.added.length
+$scope.Tax = 0;
+$scope.amt = 0;
+$rootScope.success = 0;
+
+
+};
+
 
 
 });
+
+
+
