@@ -25,11 +25,7 @@
         }]);
 
 
-<<<<<<< HEAD
 module.controller( 'loginController', function($scope,$rootScope,$location) {
-=======
-module.controller( 'loginController', function($scope,$rootScope) {
->>>>>>> c9a822fa35956a3ce960f75e945de7eae8eba8e3
   
   
     $rootScope.logpage = 1;
@@ -56,11 +52,7 @@ cond = 1;
 if(form.pswrd == obj[i].password)
 {
 
-<<<<<<< HEAD
 $location.path("/Books");
-=======
-$location.path("/Electronics");
->>>>>>> c9a822fa35956a3ce960f75e945de7eae8eba8e3
 break;
 
 }
@@ -97,7 +89,6 @@ module.controller('JSONController',function($scope,$rootScope){
   $scope.Electronics = JSON.parse(Electronics);
    $scope.Books = JSON.parse(Books);
    $scope.Clothes = JSON.parse(Clothes);
-<<<<<<< HEAD
 
   
   
@@ -129,11 +120,4 @@ alert("Item added");
   
 
 
-=======
-  
-  
-  
-  
-  
->>>>>>> c9a822fa35956a3ce960f75e945de7eae8eba8e3
 });
