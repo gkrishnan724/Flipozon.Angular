@@ -1,0 +1,3 @@
+
+Electronics = '[{"name":"e1","price":"111","image":"images/index.jpeg"},{"name":"e2","price":"142","image":"images/e1.jpeg"},{"name":"e3","price":"15","image":"images/e2.jpeg"},{"name":"e4","price":"15","image":"images/e3.jpeg"},{"name":"e5","price":"15","image":"images/e4.jpeg"},{"name":"e6","price":"15","image":"images/e5.jpeg"},{"name":"e7","price":"15","image":"images/e6.jpeg"}]';
+

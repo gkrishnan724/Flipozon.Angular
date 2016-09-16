@@ -1,0 +1,51 @@
+
+
+
+
+    <div class="container" >
+    <link rel="stylesheet" type="text/css" href="shop.css">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="lead">Shop Categories</p>
+                <div class="list-group">
+                  <a href="#/Electronics" class="list-group-item ">Electronics</a>
+                  <a href="#/Clothes" class="list-group-item ">Clothes</a>
+                  <a href="" class="list-group-item active">Books</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row" style="margin-bottom:30px;">
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                        	  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        	  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        	  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        	</ol>
+                        	<div class="carousel-inner">
+                        	  <div class="item active">
+                        	    
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <input type = "text" data-ng-model = "search" placeholder = "search" > 
+                </div>
+                 
+            
+            <div class="col-xs-18 col-sm-6 col-md-3" data-ng-repeat="item in Books |filter:search"  >
+                <div class="thumbnail">
+                    <img class="card-img-top" data-ng-src="{{item.image}}" alt="Card image cap" style="width:500px;height:100px;">
+                    <div class="card-block">
+                        <h4 size="24px" class="card-title" >{{item.name}}</h4>
+                        <br class="card-text">
+                           </br><p>{{item.price}}</p></br>
+                        
+                        <button class="btn btn-primary" data-ng-click = "AddItem(item.name,item.price)">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        
+                          
+                            
+          
