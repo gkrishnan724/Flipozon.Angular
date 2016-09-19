@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,14 +11,19 @@
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+
 </head>
 
-<body ng-app="sampleApp" background = "images/images.jpeg">
+<body data-ng-app="sampleApp" background = "images/images.jpeg" data-ng-controller = "MainController">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 <link rel="stylesheet" type="text/css" href="shop.css">
           <div class="container">
@@ -32,11 +37,13 @@
               <a class="navbar-brand" ><b><font size = 36px style = Times>Flipozon</font></b></a>
             </div>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse"
             <link rel="stylesheet" type="text/css" href="shop.css">
-              <ul class="nav navbar-nav navbar-right">
+              <ul class="nav navbar-nav navbar-right" data-ng-hide = "logpage == 1" >
+
+                <li><a class = "btn"  data-toggle="modal"  data-target="#checkoutModal">Cart <sup data-ng-show = "len>0"><span class="badge" style = "padding:5px 5px;font-size:8px;background:red">{{len}}</span></sup></a></li>
+<li><a href = "#/login" data-ng-click = "logout()">Logout</a></li>
                 
-                <li data-ng-hide = "logpage == 1"><a href = "#/login">Login</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container -->
@@ -46,7 +53,51 @@
 <br>
 <br>
 <br>
+
+<h3 data-ng-hide = "logpage == 1">Welcome {{username}}</h3>
 <br>
+
+
+<div id="checkoutModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Your Cart</h4>
+      </div>
+      <div class="modal-body">
+        <table class = "table">
+<theader><th><i>Item</i></th><th><i>Price</i></th></theader>
+<tbody><tr data-ng-repeat = "item in added track by $index | orderBy :name " > 
+	
+	<td>{{item.name}}</td><td> $ {{item.price}}</td><td><button type="button" class="close" data-ng-click = "DelItem(item)">&times;</button></td>
+	</tr>
+
+</tbody>
+
+ 
+</table>
+<table class = "table">
+
+<tr>
+<th></th><th><i>$ {{total}}</i></th></tr>
+<tr><th>Tax</th><th><i>$ {{Tax}}</i></th></tr>
+
+
+<tr><th><i>Total</i></th><th><i> $ {{amt}}</i></th></tr>
+</table>
+
+      </div>
+      <div class="modal-footer">
+<button type="button" class="btn btn-success" data-ng-click = "Bill()">Proceed to Payment</button>
+        <button type="button" class="btn btn-danger" data-ng-click = "clear()" >Clear Cart</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 
 
