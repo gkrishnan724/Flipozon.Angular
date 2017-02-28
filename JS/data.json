@@ -1,0 +1,35 @@
+{
+  "users": [
+    {"username": "test", "password": "111"},
+    {"username": "admin", "password": "142"},
+    {"username": "gopal", "password": "154"}
+  ],
+  "Books": [
+    {"name":"b1","price":"111","image":"images/b1.jpeg"},
+    {"name":"b2","price":"142","image":"images/b2.jpeg"},
+    {"name":"b3","price":"15","image":"images/b3.jpeg"},
+    {"name":"b4","price":"15","image":"images/b4.jpeg"},
+    {"name":"b5","price":"15","image":"images/b5.jpeg"},
+    {"name":"b6","price":"15","image":"images/b6.jpeg"},
+    {"name":"b7","price":"15","image":"images/b7.jpeg"}
+  ],
+  "Clothes": [
+    {"name": "c1", "price": "111", "image": "images/c1.jpeg"},
+    {"name": "c2", "price": "142", "image": "images/c2.jpeg"},
+    {"name": "c3", "price": "15", "image": "images/c3.jpeg"},
+    {"name": "c4", "price": "15", "image": "images/c4.jpeg"},
+    {"name": "c5", "price": "15", "image": "images/c5.jpeg"},
+    {"name": "c6", "price": "15", "image": "images/c6.jpeg"},
+    {"name": "c7", "price": "15", "image": "images/c7.jpeg"}
+  ],
+  "Electronics":
+  [
+    {"name":"e1","price":"111","image":"images/index.jpeg"},
+    {"name":"e2","price":"142","image":"images/e1.jpeg"},
+    {"name":"e3","price":"15","image":"images/e2.jpeg"},
+    {"name":"e4","price":"15","image":"images/e3.jpeg"},
+    {"name":"e5","price":"15","image":"images/e4.jpeg"},
+    {"name":"e6","price":"15","image":"images/e5.jpeg"},
+    {"name":"e7","price":"15","image":"images/e6.jpeg"}
+  ]
+}
