@@ -5,14 +5,13 @@
     {"username": "gopal", "password": "154"}
   ],
   "Books": [
-    {"name":"b1","price":"111","image":"images/b1.jpeg"},
-    {"name":"b2","price":"142","image":"images/b2.jpeg"},
-    {"name":"b3","price":"15","image":"images/b3.jpeg"},
-    {"name":"b4","price":"15","image":"images/b4.jpeg"},
-    {"name":"b5","price":"15","image":"images/b5.jpeg"},
-    {"name":"b6","price":"15","image":"images/b6.jpeg"},
-    {"name":"b7","price":"15","image":"images/b7.jpeg"},
-    {"name":"myBook","price":"10","image":"images/b8.jpeg"}
+    {"name":"Working on my Novel","price":"111","image":"images/b1.jpeg"},
+    {"name":"Trojan Horse","price":"142","image":"images/b2.jpeg"},
+    {"name":"The Tumor","price":"15","image":"images/b3.jpeg"},
+    {"name":"The Fault in Our Stars","price":"15","image":"images/b4.jpeg"},
+    {"name":"Harry Potter and The Order of Phoenix","price":"15","image":"images/b5.jpeg"},
+    {"name":"Harry Potter Collection","price":"15","image":"images/b6.jpeg"},
+    {"name":"Suzanne Collins","price":"15","image":"images/b7.jpeg"}
   ],
   "Clothes": [
     {"name": "c1", "price": "111", "image": "images/c1.jpeg"},
